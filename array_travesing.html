@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing </title>
+
+</head>
+
+<body>
+    <h1>Array Traversing</h1>
+    <script>
+        let myArray = [2, 5, 4, 7, 8, 9, 6, 12, 14, 54, 87, 45, 65, 78];
+        document.write(`let myArray=[2, 5, 4, 7, 8, 9, 6, 12, 14, 54, 87, 45, 65, 78] <br/>`)
+        //accesing all elements is array
+        for (let i = 0; i < myArray.length; i++) {
+            document.write(`myArray ${i} index value is ${myArray[i]} <br/>`)
+        }
+        //target by index number
+
+        let x = 1;
+        document.write(`target value by index number. ${x} indsex value is ${myArray[x]}  <br/>`)
+        '<br/>'
+
+
+        //find vallue by index number with Button click
+        // function getElement(){
+        //     let el=document.getElementById('element').value
+        //     alert(myArray[el])
+        //     document.write(`you enter the index number is ${el} and this are index value ${myArray[el]}`)
+
+        // }
+
+        //find vallue by index number with Button click with validation
+        function getElement() {
+            let totalLength = myArray.length
+            let el = document.getElementById('element').value
+           
+            if (el < myArray.length && typeof parseInt(el) === "number") {
+                alert(myArray[el])
+                document.write(`you enter the index number is ${el} and this are index value ${myArray[el]}`)
+
+            } else {
+                document.write(`please enter value vetwwen 0 to ${myArray.length - 1} or Enter valid number`)
+            }
+        }
+
+    </script>
+    <input type="text" id="element">
+    <button onclick="getElement()">Submit</button>
+
+
+</body>
+
+</html>
