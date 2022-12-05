@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert element</title>
+    <script>
+        let myArray=[10,20,40,50,60]
+        let position=2;
+        let elem=30;
+        console.log("old array",myArray)
+
+        for(let i=myArray.length-1;i>=0;i--){
+            if(i>=position){
+                myArray[i+1]=myArray[i];
+                if(i==position){
+                    myArray[i]=elem
+                }
+
+            }
+
+        }
+        console.log("new array",myArray)
+
+        function insertElement(){
+
+            let newArray=[5,10,15,20,30,35,40,50]
+            let position=document.getElementById('position').value;
+            let newElem=document.getElementById('element').value;
+            newElem=parseInt(newElem)
+            for(let i=newArray.length-1;i>=0;i--){
+                if(i>=position){
+                    newArray[i+1]=newArray[i];
+                    if(i==position){
+                        newArray[i]=newElem
+                    }
+                }
+            }
+            console.log(newArray)
+            // document.write(`your new array is ${newArray}`)
+
+            
+           
+
+
+        }
+
+    let secondArray=[100,200,300,400,600]
+    secondArray.splice(4,0,500);
+    // secondArray.splice(`wich postion to ad ellenent ,if you want delete element , what element want to add `);
+
+
+    console.log("newSecondArray",secondArray)
+      
+
+   
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Insert element</h1>
+    <input type="text" id="position" placeholder="Enter your position">
+    <input type="text" id="element" placeholder="Enter yout element for add to Array">
+    <button onclick="insertElement()">Insert Element</button>
+    
+</body>
+</html>
