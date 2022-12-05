@@ -11,9 +11,12 @@
 
     <script>
         let array=[10,20,30,45,40,50]
+        console.log("1st",array)
+
         let position=3;
-        let newArray
         for(let i=position; i<array.length-1; i++){
+            console.log("fffff",array)
+
             array[i]=array[i+1]
           
         }
@@ -28,9 +31,11 @@ document.write(` let array=[1,2,3,4,55,5,6,7,8]`)
             let position=document.getElementById('position').value;
             position=parseInt(position)
             for(let i=position;i<newArray.length-1;i++){
+                console.log("forloop",newArray)
+
                 newArray[i]=newArray[i+1]
             }
-            newArray.length=newArray.length-1; //remore last element in array
+            newArray.length=newArray.length-1;
          
             console.log("1st",newArray)
         }
