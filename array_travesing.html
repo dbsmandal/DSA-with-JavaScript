@@ -15,7 +15,7 @@
         let myArray = [2, 5, 4, 7, 8, 9, 6, 12, 14, 54, 87, 45, 65, 78];
         document.write(`let myArray=[2, 5, 4, 7, 8, 9, 6, 12, 14, 54, 87, 45, 65, 78] <br/>`)
         //accesing all elements is array
-        for (let i = 0; i < myArray.length; i++) {
+        for (var i = 0; i < myArray.length; i++) {
             document.write(`myArray ${i} index value is ${myArray[i]} <br/>`)
         }
         //target by index number
@@ -35,14 +35,14 @@
 
         //find vallue by index number with Button click with validation
         function getElement() {
-            let totalLength = myArray.length
             let el = document.getElementById('element').value
-           
-            if (el < myArray.length && typeof parseInt(el) === "number") {
+
+            if (el < myArray.length && typeof parseInt(el) === "number" && el>0) {
                 alert(myArray[el])
-                document.write(`you enter the index number is ${el} and this are index value ${myArray[el]}`)
+                return document.write(`you enter the index number is ${el} and this are index value ${myArray[el]}`)
 
             } else {
+                alert("enter valid input")
                 document.write(`please enter value vetwwen 0 to ${myArray.length - 1} or Enter valid number`)
             }
         }
