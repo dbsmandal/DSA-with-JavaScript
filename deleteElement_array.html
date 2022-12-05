@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element in Array</title>
+</head>
+<body>
+    <h1>Delete Element in Array</h1>
+
+    <script>
+        let array=[10,20,30,45,40,50]
+        let position=3;
+        let newArray
+        for(let i=position; i<array.length-1; i++){
+            array[i]=array[i+1]
+          
+        }
+        array.length=array.length-1
+        console.log("newArray",array)
+
+document.write(` let array=[1,2,3,4,55,5,6,7,8]`)
+        function deleteInput(){
+            let newArray=[1,2,3,4,55,5,6,7,8]
+            console.log("beforeRemove",newArray)
+
+            let position=document.getElementById('position').value;
+            position=parseInt(position)
+            for(let i=position;i<newArray.length-1;i++){
+                newArray[i]=newArray[i+1]
+            }
+            newArray.length=newArray.length-1;
+         
+            console.log("1st",newArray)
+        }
+    </script>
+
+    <input type="text" name="position" id="position" >
+    <button onclick="deleteInput()">Delete</button>
+    
+</body>
+</html>
