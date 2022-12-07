@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Reverse Array</title>
+</head>
+<body>
+    <h1>Recursion Reverse Array</h1>
+    <p>pas three parameter in function, fist data, second 0 means data first index, last is data last index value </p>
+    <p>in if conditon main ye bola gaya ki kab rukna hain </p>
+    <p> temp=data[start] means data k 0 index value ko temp main store karo</p>
+    <p>data[start]=data[end];  means data ke 0 index pe data last index value ko store karo </p>
+    <p>data[end]=temp means data last index pe data k 0 index value ko store karo</p>
+    <p>recursionReverseArray(data,start+1,end-1); means function tabtak chalte raho jabtak start<=end conditon true na ho jaye </p>
+    <script>
+        let data=[1,2,3,5,6,7,8];
+        let temp;
+        function recursionReverseArray(data,start,end){
+           if(start<=end){
+            temp=data[start];
+            data[start]=data[end];
+            data[end]=temp
+            recursionReverseArray(data,start+1,end-1);
+
+           }
+            console.log(data)
+
+
+        }
+        recursionReverseArray(data,0,data.length-1)
+    </script>
+</body>
+</html>
