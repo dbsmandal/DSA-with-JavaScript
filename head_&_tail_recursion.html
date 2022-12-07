@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>what is debugger</h1>
+    <p>Debugger is a function breackpoint. Debugger is decide to how many breackpoint have any function</p>
+    <h1>what is callstack</h1>
+    <p>callstack is stack, it is decide in javascript which function should first call a function</p>
+    <h1>what is head recursion and tail recursion</h1>
+    <p>both are depend on callstack and function breackpoints</p>
+    <img src="./image/tail.jpg" alt="callstackimage">
+    <script>
+        function colors(){
+            let data=20;
+            console.log(data)
+        }
+        function days(){
+            colors()
+        }
+        function fruits(){
+            days()
+        }
+        function topFunction(){
+            fruits()
+        }
+topFunction();
+    </script>
+
+    
+</body>
+</html>
