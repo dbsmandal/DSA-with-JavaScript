@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Recursion</title>
+</head>
+
+<body>
+    <h1>Data Recursion</h1>
+    <p>Recursion is a self called function in proper condition</p>
+    <p>Recursion ek function hain jo ki apne ap main hi kuch condition base pain bar bar apne ap ko call karta hain 
+        <br>
+        but agar condition thik se nahi lagaya gaya  to ye function inifinte loop main chala jata hain us bajah se hamara application hang ho jata hain
+    </p>
+    <script>
+        function apple(x) {
+            console.log("function Called")
+            if (x < 10) {
+                apple(x + 1)
+            }
+        }
+        let data = 0
+        apple(data);
+        function factorial(item){
+            if(item==0){
+                return 1
+            }
+            return item*factorial(item-1)
+        }
+        
+        let data2=5;
+        console.log(factorial(data2));
+    </script>
+
+</body>
+
+</html>
