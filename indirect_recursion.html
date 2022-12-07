@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Indirect Recursion</h1>
+
+    <script>
+        function test(x) {
+            console.log("before loop", x)
+            if (x > 0) {
+                test(x - 1)
+            }
+            console.log("after loop", x)
+        }
+        let data = 5
+        test(data)
+
+
+        //write a function you have 100 rs ,and if you buy one aplle then you give 10 rs ,in that case howmany aplle possible to buy apple
+
+        let money=105;
+        let totalApple=0;
+
+        function buyApple(walet){
+            if(walet>=10){
+                totalApple++
+                buyApple(walet-10)
+            }else{
+                console.log(`you dont have money to buy apple .your wallet balance is ${walet} and you ${totalApple} number of apple already buyed`)
+            }
+        }
+
+        buyApple(money)
+
+    //another way to write indirect_recursion
+
+    let myMoney=207;
+    let totalMango=0;
+
+    function buyMango(x){
+        if(x>=10){
+            //if mango rate is 10
+            buyMoreMango(x-10)
+        }else{
+            console.log(`you dont have money.you buyed ${totalMango} mangos and your rest money is ${x} rs`)
+        }
+
+    }
+    function buyMoreMango(x){
+        totalMango++
+        buyMango(x-10)
+
+    }
+    buyMango(myMoney);
+        
+    </script>
+</body>
+
+</html>
