@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+</head>
+<body>
+    <h1>Stack</h1>
+    <script>
+        let data=[];
+        let max=5;
+        let currentSize=data.length;
+        function push(newVal){
+            if(currentSize>=max){
+                console.log(`you cant add this value ${newVal} because you stack is full`)
+            }else{
+            
+                data[currentSize]=newVal;
+                currentSize +=1;
+            }
+        }
+
+        function pop(){
+            if(currentSize>0){
+                currentSize -=1;
+                data.length=currentSize
+
+            }else{
+                console.log(`your stack is already empty`)
+            }
+            console.log(data)
+        }
+        push(20)
+        push(10)
+        push(30)
+        push(40)
+        push(50)
+        push(60)
+        push(70)
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+        pop()
+
+
+
+    </script>
+    
+</body>
+</html>
