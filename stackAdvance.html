@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack with Input and Buttons</title>
+</head>
+
+<body>
+    <input type="number" id="input"  >
+    <button onclick="push()">Push</button>
+    <button onclick="pop()">Pop</button>
+    <button onclick="display()">Display</button>
+    <script>
+        let data = [];
+            let max = 5;
+            let currentSize = data.length;
+
+        function push() {
+            let newVal=document.getElementById('input').value;
+            
+            if (currentSize>=max){
+                alert(`your stack full and your stack limit is ${max} and your stack is ${data} . You cant add this ${newVal}`)
+            }else{
+                data[currentSize]=newVal;
+                currentSize +=1;
+                document.getElementById('input').value=""
+            }
+
+
+        }
+        function pop(){
+            if(currentSize>1){
+                
+              currentSize -=1
+               data.length=currentSize
+            }else{
+                alert(`your stack have only one value`)
+            }
+
+        }
+        function display(){
+            console.log("display data",data);// display all 
+            for(let i=0;i<data.length;i++){
+                console.log("display data 2",data[i]);//display one by one 
+            }
+
+        }
+
+       
+
+
+
+
+    </script>
+
+</body>
+
+</html>
