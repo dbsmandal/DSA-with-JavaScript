@@ -10,6 +10,48 @@
 
 <body>
     <h1>Reverse String with Stack</h1>
+    <p>step1:
+        define an empty array and current size
+        let data = [];<br>
+        let currentSize = data.length;<br>
+
+    </p>
+    <p>
+        step2:
+        write push and pop funtion like that --
+        function push(newVal) {<br>
+            data[currentSize] = newVal;<br>
+            currentSize += 1<br>
+        }<br>
+        function pop() {<br>
+            let lastRemovedItem = data[currentSize - 1];<br>
+            currentSize -= 1;<br>
+            data.length = currentSize;<br>
+            return lastRemovedItem<br>
+        }
+
+    </p>
+    <p>
+        step4: <br>
+        write revrese item where pass array--
+        function reverseItem(item) {<br>
+            for (let i = 0; i < item.length; i++) {<br>
+                push(item[i])<br>
+            }<br>
+            for (let i = 0; i < item.length; i++) {<br>
+                item[i] = pop()<br>
+            }<br>
+        }<br>
+
+    </p>
+    <p>
+        step5:<br>
+        let str = "dipak";<br>
+        str = str.split("");//if you pass string any funtion then it must should be object or array<br>
+        push(str)<br>
+        reverseItem(str)<br>
+        console.log("str print", str.join(""))<br>
+    </p>
 
 
     <script>
@@ -25,8 +67,6 @@
             currentSize -= 1;
             data.length = currentSize;
             return lastRemovedItem
-            console.log(lastRemovedItem)
-
         }
         function reverseItem(item) {
             for (let i = 0; i < item.length; i++) {
@@ -37,7 +77,7 @@
             }
         }
         let str = "dipak";
-        str = str.split("");
+        str = str.split("");//if you pass string any funtion then it must should be object or array
         push(str)
         reverseItem(str)
         console.log("str print", str.join(""))
