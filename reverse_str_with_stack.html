@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String with Stack</title>
+</head>
+
+<body>
+    <h1>Reverse String with Stack</h1>
+
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+
+        function push(newVal) {
+            data[currentSize] = newVal;
+            currentSize += 1
+        }
+        function pop() {
+            let lastRemovedItem = data[currentSize - 1];
+            currentSize -= 1;
+            data.length = currentSize;
+            return lastRemovedItem
+            console.log(lastRemovedItem)
+
+        }
+        function reverseItem(item) {
+            for (let i = 0; i < item.length; i++) {
+                push(item[i])
+            }
+            for (let i = 0; i < item.length; i++) {
+                item[i] = pop()
+            }
+        }
+        let str = "dipak";
+        str = str.split("");
+        push(str)
+        reverseItem(str)
+        console.log("str print", str.join(""))
+    </script>
+</body>
+
+</html>
