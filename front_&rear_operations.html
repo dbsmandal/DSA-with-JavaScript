@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front & Rear Operations in Queue Data Structure</title>
+    <script>
+        let queue = [];
+        let currentSize = queue.length;
+        let maxSize = 5;
+
+        function enqueue(newVal) {
+            if (currentSize >= maxSize) {
+                console.log(`your queue is full . you cant add ${newVal} and your queue is ${queue}`)
+            } else {
+                queue[currentSize] = newVal;
+                currentSize++;
+            }
+        }
+
+        function dequeue() {
+            if (!isEmpty()) {
+                for (let i = 0; i < queue.length; i++) {
+                    queue[i] = queue[i + 1];
+                }
+                currentSize--;
+                queue.length = currentSize;
+            } else {
+                console.log(`your queue is empty.`)
+            }
+        }
+        function front() {
+            if (!isEmpty()) {
+                console.log(queue[0])
+            }else{
+                console.log(`your queue is empty.`)
+            }
+        }
+        function rear() {
+            if (!isEmpty()) {
+                console.log(queue[currentSize-1])
+            }else{
+                console.log(`your queue is empty.`)
+            }
+        }
+        function isEmpty(){
+            if(currentSize<=0){
+                return true
+            }else{
+                return false
+            }
+        }
+
+
+        function display() {
+            console.log(queue)
+        }
+        enqueue(10);
+        enqueue(20);
+        enqueue(30);
+        enqueue(40);
+        enqueue(50);
+        
+
+        display()
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Front & Rear Operations in Queue Data Structure</h1>
+
+</body>
+
+</html>
