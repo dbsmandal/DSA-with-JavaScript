@@ -11,15 +11,17 @@
         let currentSize = queue.length;
         let maxSize = 5;
 
-        function enqueue(newVal) {
+        function enqueue() {
+            let newVal = document.getElementById('newVal').value
+            newVal = parseInt(newVal)
             if (currentSize >= maxSize) {
                 console.log(`your queue is full . you cant add ${newVal} and your queue is ${queue}`)
             } else {
                 queue[currentSize] = newVal;
                 currentSize++;
+                newVal = document.getElementById('newVal').value = "" //after button click clean input box
             }
         }
-
         function dequeue() {
             if (!isEmpty()) {
                 for (let i = 0; i < queue.length; i++) {
@@ -34,21 +36,21 @@
         function front() {
             if (!isEmpty()) {
                 console.log(queue[0])
-            }else{
+            } else {
                 console.log(`your queue is empty.`)
             }
         }
         function rear() {
             if (!isEmpty()) {
-                console.log(queue[currentSize-1])
-            }else{
+                console.log(queue[currentSize - 1])
+            } else {
                 console.log(`your queue is empty.`)
             }
         }
-        function isEmpty(){
-            if(currentSize<=0){
+        function isEmpty() {
+            if (currentSize <= 0) {
                 return true
-            }else{
+            } else {
                 return false
             }
         }
@@ -57,21 +59,30 @@
         function display() {
             console.log(queue)
         }
-        enqueue(10);
-        enqueue(20);
-        enqueue(30);
-        enqueue(40);
-        enqueue(50);
-        
-
-        display()
-
+        // document.write(console.log(`Queue=[${queue}]`))
 
     </script>
 </head>
 
 <body>
     <h1>Front & Rear Operations in Queue Data Structure</h1>
+    <button onclick="display()">Display Queue</button> <br>
+
+    <input type="number" placeholder=" enter your element" id="newVal"> <br>
+    <button onclick="enqueue()">Add New Value in Queue</button> <br>
+    <button onclick="display()">Display Queue</button> <br>
+
+    <button onclick="dequeue()">Remove</button><br>
+    <button onclick="display()">Display Queue</button> <br>
+
+    <button onclick="front()">Front value</button><br>
+    <button onclick="display()">Display Queue</button> <br>
+
+    <button onclick="rear()">Rear value</button><br>
+    <button onclick="display()">Display Queue</button> <br>
+
+
+
 
 </body>
 
