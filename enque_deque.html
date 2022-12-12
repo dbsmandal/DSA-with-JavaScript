@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enqueue and dequeue in javascript</title>
+    <script>
+        let queue = [];
+        let currentSze = queue.length;
+        let maxSize = 5;
+        function enqueue(newVal) {
+            if (currentSze >= maxSize) {
+                console.log(`Your queue is full.this is your queue = [${queue}] `)
+            } else {
+                queue[currentSze] = newVal;
+                currentSze++;
+            }
+        }
+        function dequeue() {
+            if (currentSze > 0) {
+                for (let i = 0; i < queue.length; i++) {//here we are using forloop we need to remove i=0 value
+                    queue[i] = queue[i + 1];
+                }
+                currentSze--;
+                queue.length = currentSze;
+            } else {
+                console.log("your queue is empty")
+            }
+
+        }
+        function display() {
+            console.log(queue)
+        }
+        enqueue(10)
+        enqueue(20)
+        enqueue(30)
+        enqueue(40)
+        enqueue(50)
+        enqueue(60)
+
+        display()
+
+    </script>
+</head>
+
+<body>
+    <h1>enqueue and dequeue in javascript</h1>
+    <h3> A queue is defined as a linear data structure that is open at both ends and the operations are performed in
+        First In First Out (FIFO) order.</h3>
+    <h1>Defference between stack and queue</h1>
+    <p>Ans: queue follow by FIFO order(First in first out) but stack follow by FILO order (first in last out)</p>
+
+</body>
+
+</html>
