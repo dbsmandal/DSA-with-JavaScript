@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search With Javascript</title>
+
+</head>
+
+<body>
+    <h1>Binary Search With Javascript</h1>
+    <script>
+        // let data = [2, 5, 6, 7, 9, 10, 12, 14, 21, 26, 29, 54, 67, 84, 94, 96];
+        // let find = 26;
+        // let start = 0;
+        // let end = data.length - 1;
+        // let pos = undefined;
+
+        // while(start <= end){
+        //     let mid = Math.floor((start + end) / 2);
+        //     if (data[mid] === find) {
+        //         pos = mid;
+        //         break;
+        //     } else if (data[mid] < find) {
+        //         start = mid + 1
+        //     } else {
+        //         end = mid - 1
+        //     }
+
+        // }
+        // console.log(pos)
+
+        function searchElementBinary() {
+            let data = [2, 5, 6, 7, 9, 10, 12, 14, 21, 26, 29, 54, 67, 84, 94, 96];
+            let find = document.getElementById('el').value;
+            find = parseInt(find)
+            let start = 0;
+            let end = data.length - 1;
+            let pos = undefined;
+            while (start <= end) {
+                let mid = Math.floor((start + end) / 2);
+                if (data[mid] === find) {
+                    pos = mid;
+                    break;
+                } else if (data[mid] < find) {
+                    start = mid + 1
+                } else if (data[mid] > find) {
+                    end = mid - 1
+                }
+                document.getElementById('el').value = ""
+            }
+            console.log(`your searched element is ${find} and your find element position is ${pos}`)
+        }
+
+    </script>
+    <p>let data = [2, 5, 6, 7, 9, 10, 12, 14, 21, 26, 29, 54, 67, 84, 94, 96];</p>
+
+    <input type="text" name="el" id="el">
+    <button onclick="searchElementBinary()">Search_Binary</button>
+
+</body>
+
+</html>
