@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectin Sort in Reverese </title>
+    <script>
+        
+        let items = [22, 5, 78, 52, 12, 21, 34, 56, 91, 108, 6, 11];
+
+    function selectionSortReverse(data){
+        for(let i=0; i<data.length; i++){
+            let minValue=i;
+            for(let j=i+1; j<data.length; j++){
+                if(data[j]>data[minValue]){
+                    minValue=j
+                }
+
+            }
+            let temp=data[minValue]
+            data[minValue]=data[i]
+            data[i]=temp
+        }
+        console.log(data)
+
+    }
+
+    selectionSortReverse(items)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

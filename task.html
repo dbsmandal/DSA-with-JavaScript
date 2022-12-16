@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [2, 5, 4, 8, 25, 6, 12, 16, 13, 18, 21]
+        //outpu arr=[2,4,5,8,13,16,18,21,25,6,12]
+
+        let pos1 = undefined;
+        let pos2 = undefined
+        function popEl(data) {
+            console.log("main data",data)
+            console.log("1st",data.length)
+
+            for (let i = 0; i < data.length; i++) {
+                let find1 = 6;
+
+                if (data[i] == find1) {
+                    pos1 = i;
+                    pos2 = i + 1;
+                    var data4=[data[pos1],data[pos2]]
+                    console.log("data4",data4)
+
+                }
+                // let data4=[data[pos1],data[pos2]]
+                // console.log("data4",data4)
+            }
+            console.log(pos1,arr[pos1],pos2,arr[pos2])
+            data.splice(pos1,2)
+            console.log("duplicate data",data);
+            for(let j=0;j<data.length;j++){
+                console.log("send",data.length)
+                for(let k=j+1;k<data.length;k++){
+                    if(data[j]>data[k]){
+                        let temp=data[k]
+                        data[k]=data[j]
+                        data[j]=temp
+                    }
+                }
+            }
+            console.log("data 3",data)
+            let newdata=[...data,...data4]
+            console.log("finaldata",newdata)
+            return newdata
+
+        }
+
+        popEl(arr)
+    </script>
+</body>
+
+</html>

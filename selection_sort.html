@@ -54,25 +54,6 @@
         selectionSort(items);
         console.log(items)
 
-        let items2 = [22, 5, 78, 52, 12, 21, 34, 56, 91, 108, 6, 11];
-
-        function selectionSortDecending(data) {
-
-            for (let i = 0; i < data.length; i++) {
-                let minValue = i;
-                for (let j = i + 1; j < data.length; j++) {
-                    if (data[j] > data[minValue]) {
-                        minValue = j;
-                    }
-                }
-                let temp = data[minValue]
-                data[minValue] = data[i]
-                data[i] = temp;
-            }
-
-        }
-        selectionSortDecending(items2);
-        console.log(items2)
     </script>
 
 </body>
