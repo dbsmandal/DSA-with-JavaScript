@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str1 = 'level';
+        let str2 = "something"
+        function ispalindrome(data) {
+            let reverseData = data.split("").reverse().join("")
+            console.log(reverseData)
+            for (let i = 0; i < reverseData.length; i++) {
+                if (reverseData[i] === data[i]) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+        console.log(ispalindrome(str1))
+        console.log(ispalindrome(str2))
+
+        function fizzBuzz(n) {
+            for (let i = 1; i < n; i++) {
+                if (i % 15 == 0 ) {
+                    console.log("FizzBuzz")
+                } else if (i % 3 == 0) {
+                    console.log("Fizz")
+                } else if (i % 5 == 0) {
+                    console.log("Buzz")
+                } else {
+                    console.log(i)
+                }
+
+            }
+
+        }
+       fizzBuzz(35)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
