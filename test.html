@@ -60,6 +60,24 @@
   selectionSort(arr)
   console.log(arr)
 
+
+  function ispalindrome2(str){
+    let newStr=str.split("").reverse().join("");
+    console.log(newStr);
+    for(let i=0; i<str.length;i++){
+        for(let j=0; j<newStr.length; j++){
+            if(str[i]===newStr[j]){
+                return true;
+            }else{
+                return false
+            }
+        }
+    }
+
+
+  }
+let data="level"
+console.log(ispalindrome2(data))
     </script>
 </head>
 

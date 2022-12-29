@@ -10,30 +10,39 @@
 
 <body>
     <script>
+        function palindrome(str) {
+            let start = 0;
+            let end = str.length - 1;
+            let result = true;
+            while (end > start) {
+                if (data[start] != data[end]) {
+                    result = false
+                }
+                start++;
+                end--;
+            }
+            return result;
 
+        }
+        let data = "level"
+        console.log(palindrome(data))
         function isPalindrome(data) {
             let str = data
             let newStr = str.split("").reverse().join("")
             for (let i = 0; i < str.length; i++) {
-                for (let j = 0; j < newStr.length; j++) {
-                    if (str[i] === newStr[j]) {
-                        return true
-                        // console.log(true)
-                    } else {
-                        return false
-                        // console.log(false)
-                    }
+                if (str[i] === newStr[i]) {
+                    return true
+                } else {
+                    return false
                 }
-
             }
-
         }
-        let data1="level"
-        let data2="dipak"
+        let data1 = "level"
+        let data2 = "dipak"
         // let data3=1112111
 
-       console.log( isPalindrome(data1))
-       console.log( isPalindrome(data2))
+        console.log(isPalindrome(data1))
+        console.log(isPalindrome(data2))
     //    console.log( isPalindrome(data3))
 
 
