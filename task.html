@@ -14,10 +14,11 @@
         //outpu arr=[2,4,5,8,13,16,18,21,25,6,12]
 
         let pos1 = undefined;
-        let pos2 = undefined
+        let pos2 = undefined;
+        let data4=[]
         function popEl(data) {
-            console.log("main data",data)
-            console.log("1st",data.length)
+            // console.log("main data",data)
+            // console.log("1st",data.length)
 
             for (let i = 0; i < data.length; i++) {
                 let find1 = 6;
@@ -25,14 +26,14 @@
                 if (data[i] == find1) {
                     pos1 = i;
                     pos2 = i + 1;
-                    var data4=[data[pos1],data[pos2]]
-                    console.log("data4",data4)
+                    data4=[data[pos1],data[pos2]]
+                    // console.log("data4",data4)
 
                 }
                 // let data4=[data[pos1],data[pos2]]
                 // console.log("data4",data4)
             }
-            console.log(pos1,arr[pos1],pos2,arr[pos2])
+            // console.log(pos1,arr[pos1],pos2,arr[pos2])
             data.splice(pos1,2)
             console.log("duplicate data",data);
             for(let j=0;j<data.length;j++){

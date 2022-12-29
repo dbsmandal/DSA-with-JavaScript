@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Sort V-27</title>
+    <script>
+        let data = [12, 11, 13, 5, 6]
+        function insertionSort(arr) {
+            let i, j, current;
+            for (let i = 1; i < arr.length; i++) {
+                current = arr[i];
+                j = i - 1;
+                while (j >= 0 && arr[j] > current) {
+                    arr[j + 1] = arr[j]
+                    j--;
+                }
+                arr[j + 1] = current
+            }
+
+        }
+        insertionSort(data);
+        console.log(data)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

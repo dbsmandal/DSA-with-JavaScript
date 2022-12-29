@@ -25,7 +25,7 @@
 
         function fizzBuzz(n) {
             for (let i = 1; i < n; i++) {
-                if (i % 15 == 0 ) {
+                if (i % 15 == 0) {
                     console.log("FizzBuzz")
                 } else if (i % 3 == 0) {
                     console.log("Fizz")
@@ -38,7 +38,27 @@
             }
 
         }
-       fizzBuzz(35)
+        fizzBuzz(35)
+
+
+        let arr = [25, 12, 45, 3, 65, 5]
+        function selectionSort(data) {
+            for (let i = 0; i < data.length; i++) {
+                let minId = i;
+                for (let j = i + 1; j < data.length; j++) {
+                    if (data[j] < data[minId]) {
+                        minId = j;
+                    }
+                }
+                let temp = data[minId];
+                data[minId] = data[i]
+                data[i] = temp
+            }
+
+
+        }
+  selectionSort(arr)
+  console.log(arr)
 
     </script>
 </head>
