@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check String anaram or not</title>
+    <script>
+
+        function checkAnagram(str1,str2){
+
+            let str1Obj={};
+            if(str1.length!==str2.length){
+                return false;
+            }
+            for(ch1 of str1){
+                console.log(ch1)
+                str1Obj[ch1]=(str1Obj[ch1] || 0)+1
+            }
+            console.log(str1Obj)
+            for(ch2 of str2){
+                if(!str1Obj[ch2]){
+                    return false;
+                }
+                str1Obj[ch2]--
+
+            }
+            return true
+        }
+        console.log(checkAnagram("hello","ellhh"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
