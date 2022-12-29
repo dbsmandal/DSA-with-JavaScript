@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Building</title>
+</head>
+<script>
+    let arr=[10,7,19,22,8,100,89]
+    //write a function called evenValuesOnly and  find even values from array and make double of every even element and find length and return as a object conatn neew data and length
+    function evenValuesOnly(data){
+        let newData=[];
+        let dataObj={}
+        for(let i=0; i<data.length; i++){
+            if(data[i]%2==0){
+                newData.push(data[i]*2);
+
+            }
+            // console.log(newData)
+        }
+        let newDatalength=newData.length
+        dataObj.data=newData;
+        dataObj.length=newDatalength
+        return dataObj
+
+    }
+console.log(evenValuesOnly(arr))   
+ console.log(arr)
+</script>
+<body>
+    <h1>Problem Solving and Logic Building</h1>
+    <p>understand complet problem</p>
+    <p>find solution general way</p>
+    <p>break the problems in parts</p>
+    <p>think coding solution</p>
+    <p>reanalysis solution</p>
+    <p>then write code</p>
+    
+</body>
+</html>
