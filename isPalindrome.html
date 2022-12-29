@@ -26,8 +26,7 @@
         }
         let data = "level"
         console.log(palindrome(data))
-        function isPalindrome(data) {
-            let str = data
+        function isPalindrome(str) {
             let newStr = str.split("").reverse().join("")
             for (let i = 0; i < str.length; i++) {
                 if (str[i] === newStr[i]) {
