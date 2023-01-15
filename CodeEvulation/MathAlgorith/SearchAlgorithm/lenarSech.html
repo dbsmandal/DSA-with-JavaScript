@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenear search</title>
+    <p>
+        given an array of n elelments ,target element t, find the index of t. return -1 if t not found
+    </p>
+    <script>
+        //     given an array of n elelments ,target element t, find the index of t. return -1 if t not found
+
+        function lenearSearch(arr,t){
+            let index=-1;
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]===t){
+                    index=i;
+                }
+            }
+            return index
+        }
+        console.log(lenearSearch([-5,2,10,4,6],10))//2
+        console.log(lenearSearch([-5,2,10,4,6],6))//4
+        console.log(lenearSearch([-5,2,10,4,6],20))//-1;
+        //O(n)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
