@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Of Two</title>
+    <script>
+        function isPowerOfTwo1(n) {
+            if (n < 1) {
+                return false
+            }
+            return (n & (n - 1)) === 0
+        }
+        console.log("1",isPowerOfTwo1(1))
+        console.log("2",isPowerOfTwo1(2))
+        console.log("5",isPowerOfTwo1(5))
+        console.log("32",isPowerOfTwo1(32))
+
+        //2nd way 
+        function isPowerOfTwo(n) {
+            if(n<1){
+                return false
+            }
+            while(n>1){
+                if(n%2 !==0){
+                    return false
+                }
+                n=n/2;
+            }
+            return true;
+        }
+        console.log("1",isPowerOfTwo(1))
+        console.log("2",isPowerOfTwo(2))
+        console.log("5",isPowerOfTwo(5))
+        console.log("24",isPowerOfTwo(24))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // function powerOfTwo3(n) {
+        //     let result = Math.sqrt(n);
+        //     if ((result - Math.floor(result)) === 0) {
+        //         return true;
+        //     } else {
+        //         return false
+        //     }
+
+        // }
+        // console.log(powerOfTwo3(1))
+        // console.log(powerOfTwo3(2))
+        // console.log(powerOfTwo3(5))
+        // console.log(powerOfTwo3(25))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
