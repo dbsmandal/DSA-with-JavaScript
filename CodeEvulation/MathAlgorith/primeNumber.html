@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number or not</title>
+    <p>
+        given the natual number n, determine the number prime or not;
+
+        isprime(5)==true; because 5*1 and 1*5 only
+    </p>
+    <script>
+        //1st way
+
+        function isPrime(n){
+            let result=true;
+            if(n<2){
+                result=false
+            }
+            for(let i=2;i<=Math.sqrt(n);i++){
+                if(n%i==0){
+                    result= false;
+                }
+            }
+            return result;
+
+        }
+        // complexcity=O(n)--lenear
+        console.log("1",isPrime(1))
+        console.log("2",isPrime(2))
+        console.log("3",isPrime(3))
+        console.log("4",isPrime(4))
+        console.log("11",isPrime(11))
+        console.log("12",isPrime(12))
+        console.log("125",isPrime(125))
+        console.log("111",isPrime(111))
+
+
+
+
+
+
+
+
+
+//2nd way
+        function isPrime2(n){
+            let result=true;
+            if(n<2){
+                result=false
+            }
+            for(let i=2;i<n;i++){
+                if(n%i==0){
+                    result= false;
+                }
+            }
+            return result;
+
+        }
+        // complexcity=O(n)--lenear
+        console.log(isPrime2(1))
+        console.log(isPrime2(2))
+        console.log(isPrime2(3))
+        console.log(isPrime2(4))
+        console.log(isPrime2(11))
+        console.log(isPrime2(12))
+        console.log("111",isPrime2(111))
+
+
+        
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
