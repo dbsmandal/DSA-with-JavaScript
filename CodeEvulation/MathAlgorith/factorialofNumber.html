@@ -5,9 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factorial of a number</title>
+    <title>Factorial of a number || recurcive Factorial</title>
     <p>Given a number n, find the factorial og n</p>
     <script>
+        //recurcive approch
+
+        function recurciveFactorial(n){
+            if(n==0){
+                return 1
+            }
+          return n*recurciveFactorial(n-1)
+          
+
+        }
+        console.log("recursive approch",recurciveFactorial(0))//1
+        console.log("recursive approch",recurciveFactorial(1))//1
+        console.log("recursive approch",recurciveFactorial(5))//120
+
+
+
+
+
+//general way
         function factorial(n) {
             let result = 1         
             for (let i = 2; i <= n; i++) {
