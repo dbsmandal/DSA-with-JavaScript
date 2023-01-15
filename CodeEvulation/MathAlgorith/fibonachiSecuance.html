@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fibonacci Sequence</title>
+    <title>Fibonacci Sequence || recursive </title>
     <script>
         //print the number in fibonachi sequence
+    
         //1st way
         function fibonacci2(n) {
            let arr=[0,1];
@@ -36,6 +37,7 @@
         console.log(fibonacci2(2))
         console.log(fibonacci2(3))
         console.log(fibonacci2(7))
+        //O(n)
 
 
         ///3 rd way 
@@ -56,7 +58,20 @@
         }
         console.log(fibonacci3(2))
         console.log(fibonacci3(3))
-        console.log(fibonacci3(7))
+        console.log(fibonacci3(7));
+
+         //recursive approch 
+         //in fibbonachi solution not good in recursive approch
+         function recursiveFibonacci2(n) {
+            if(n<2){
+                return n
+            }
+           return recursiveFibonacci2(n-1)+recursiveFibonacci2(n-2)
+        }
+        console.log(recursiveFibonacci2(2))
+        console.log(recursiveFibonacci2(3))
+        console.log(recursiveFibonacci2(7))
+//O(2^n)
 
     </script>
 </head>
