@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursive Binary Search</title>
     <h3>1.if array is empty return mid-1
-        2.if the arr has elemnts ,find the middle and if  target is middle elemnt return midle 
-        3.if tarhet lessthan middle lemnent  left half of the array
-        4.if tarhet greaterthan middle lemnent  right half of the array
+        2.if the arr has elemnts ,find the middle and if target is middle elemnt return midle
+        3.if tarhet lessthan middle lemnent left half of the array
+        4.if tarhet greaterthan middle lemnent right half of the array
     </h3>
     <script>
         let data = [-5, 2, 4, 6, 10]
         function recursiveBinarySearch(arr, start, end) {
             let target=25
-       
+
             while (start <= end) {
                 let mid = Math.floor((start + end) / 2);
                 if (arr[mid] == target) {
@@ -33,7 +33,34 @@
             }
             return -1;
         }
-        console.log(recursiveBinarySearch(data, 0, data.length - 1))//2
+        console.log("1st",recursiveBinarySearch(data, 0, data.length - 1))//2
+
+        //another aproch
+
+
+        function recursiveBinarySearch2(arr, target) {
+
+            return search(arr, 0, arr.length - 1, target)
+            function search(arr, start, end, target) {
+                if (start > end) {
+                    return -1
+                }
+                let mid = Math.floor((start + end) / 2);
+                if (arr[mid] == target) {
+                    return mid
+                }
+                if (arr[mid] > target) {
+                    end = mid - 1
+                    search(arr, start,mid - 1, target)
+                } else if (arr[mid] < target) {
+                    start = mid + 1;
+                    search(arr, start, end, target)
+                }
+            }
+        }
+        console.log("2nd", recursiveBinarySearch2(data, 4))//2
+        console.log("2nd", recursiveBinarySearch2(data, 40))//-1
+
 
     </script>
 </head>
