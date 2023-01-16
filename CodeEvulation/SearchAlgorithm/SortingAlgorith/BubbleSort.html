@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort in array</title>
+    <script>
+        let arr = [-6, 20, 8, -2, 4];
+        let arr2 = [-6, 20, 8, -2, 4];
+
+        //bubblesort with doWhileloop
+
+        function bubbleSortWhile(data) {
+            let swaped;
+            do {
+                swaped = false;
+                for (let i = 0; i < data.length - 1; i++) {
+                    if (data[i] > data[i + 1]) {
+                        let temp = data[i];
+                        data[i] = data[i + 1]
+                        data[i + 1] = temp;
+                        swaped = true
+                    }
+                }
+
+            } while (swaped);
+            return data
+
+        }
+        console.log("two whilellop", bubbleSortWhile(arr2));
+        
+
+        //bubble sort wit two forloop
+        function bubbleSort(data) {
+            for (let i = 0; i < data.length; i++) {
+                for (let j = i+1; j < data.length; j++) {
+                    if (data[i] > data[j]) {
+                        let temp = data[i];
+                        data[i] = data[j];
+                        data[j] = temp
+                    }
+                }
+            }
+            return data
+        }
+        console.log("two forloop", bubbleSort(arr));
+
+        //Big O=O(n^2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
