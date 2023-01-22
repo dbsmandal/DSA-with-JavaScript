@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find max value in nsested Array</title>
+    <script>
+        let data = [1, 56, 78, [10, 24, [22, 11, 67, [55]]]];
+
+        function max(arr) {
+            //.flat(Infinity) means whatever depth in nested array all are convert in single depth array
+            return Math.max(...arr.flat(Infinity))
+        }
+        console.log(max(data))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
