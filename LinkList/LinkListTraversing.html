@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link List Traversing</title>
+    <script>
+
+        //create a LinkList and add some value in the Node and Traversing the List Node
+
+
+        class List{
+            constructor(data){
+                this.head={
+                    val:data,
+                    next:null
+                }
+                this.tail=this.head;
+                this.size=1;
+            }
+
+            appendList(nodeData){
+                let newNode={
+                    val:nodeData,
+                    next:null
+                }
+
+                this.tail.next=newNode;
+                this.tail=newNode;
+                this.size++
+
+            }
+            traversing(){
+                let cout=0;
+                let currentNode=this.head;
+                while(cout<this.size){
+                    console.log(cout);
+                    console.log(currentNode)
+                    currentNode=currentNode.next;
+                    cout++
+                }
+            }
+
+
+        }
+
+
+        let linkList= new List(100);
+
+        linkList.appendList(200);
+        linkList.appendList(300);
+        linkList.appendList(400);
+        linkList.appendList(500);
+        linkList.appendList(600);
+        linkList.appendList(700);
+
+        linkList.traversing()
+
+
+        console.log(linkList)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
