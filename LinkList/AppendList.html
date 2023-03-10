@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a LinkList And add some Value</title>
+
+    <p>
+
+    </p>
+    <script>
+        //Create a LinkList And add some Value
+
+        
+        class List {//create a class and define head and tail 
+            constructor(data) {
+                this.head = {
+                    val: data,
+                    next: null
+                }
+                this.tail = this.head;
+                this.size = 1
+            }
+//add data
+//in appendList function create and object callled newNode with val==nodeData,next==null
+// add this object tail.next and tail 
+            appendList(nodeData){
+                let newNode={
+                    val:nodeData,
+                    next:null
+                };
+                this.tail.next=newNode;
+                this.tail=newNode
+                this.size++
+            }
+            
+        }
+
+        let list = new List(100);
+        list.appendList(200);
+        list.appendList(300)
+        list.appendList(400)
+        list.appendList(500)
+        list.appendList(600)
+        list.appendList(700)
+
+
+        console.log(list)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
